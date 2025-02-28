@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraction Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="JS/main.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Calculator</h1>
+
+        <section class="calculate shown" id="calculate">
+            <div class="fraction-container">
+                <input type="number" name="" id="" class="number">
+
+                <div class="line"></div>
+
+                <input type="number" name="" id="" class="number">
+            </div>
+
+            <select name="" id="operations" class="operations">
+                <option value="plus"> + </option>
+                <option value="minus"> – </option>
+                <option value="multiply"> × </option>
+                <option value="divion"> ÷ </option>
+            </select>
+
+            <div class="fraction-container">
+                <input type="number" name="" id="" class="number">
+
+                <div class="line"></div>
+
+                <input type="number" name="" id="" class="number">
+            </div>
+
+        </section>
+
+        <section class="answer hidden" id="answer">
+            <h4 id="equation"></h4>
+            <p id="equation-answer"></p>
+        </section>
+
+        <button type="submit" class="submit" id="submit">Submit</button>
+        <button class="back hidden" id="back">Back</button>
+    </main>
+</body>
+</html>

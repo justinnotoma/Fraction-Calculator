@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --header-font: "Hind Mysuru", serif;
+    --normal-font: "Poppins", serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--normal-font);
+}
+
+* .hidden {
+    display: none;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: auto;
+    height: 100vh;
+
+    background: linear-gradient(to right,lightgreen, rgb(196, 196, 212));
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    width: 675px;
+    height: 350px;
+    padding: 2rem;
+
+    border-radius: 1rem;
+    background-color: rgb(233, 233, 233);
+
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+
+    & h1 { font-family: var(--header-font); }
+
+    .calculate,
+    .answer {
+        width: 50%;
+        height: 50%;
+
+        overflow: hidden;
+    }
+
+    .calculate.shown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .answer.shown {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calculate .fraction-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 23%;
+        height: 100%;
+
+        .number {
+            width: 100%;
+            height: 45%;
+
+            text-align: center;
+
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        .number:focus-within { outline: none; }
+
+        .line {
+            width: 100%;
+            height: 1%;
+            background-color: black;
+        }
+    }
+
+    .operations {
+        width: 33%;
+        height: 50%;
+        text-align: center;
+
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    & button {
+        width: 20%;
+        height: 15%;
+        text-align: center;
+
+        border: none;
+        border-radius: 1.2rem;
+        font-weight: 600;
+
+        transition: all 0.5s;
+    }
+
+    & button:hover {
+        transform: scale(1.1);
+    }
+
+    .submit { background-color: rgb(154, 187, 198); }
+    .back { background-color: lightcoral; }
+}
